@@ -1,16 +1,14 @@
 const User = require("./user");
-const workout_log = require("./workout-log");
+const WorkoutLog = require("./workoutLog");
 const { Sequelize } = require('sequelize');
 
-
-User.hasMany(workout_log, {
-    foreignkey:'user_id',
-    onDelete: 'CASCADE'
+User.hasMany(WorkoutLog, {
+  foreignKey: 'user_id',
+  onDelete: 'CASCADE'
 });
 
-
-workout_log.belongsTo(User, {
-    foreignkey: 'user_id'
+WorkoutLog.belongsTo(User, {
+  foreignKey: 'user_id'
 });
 
-module.exports = {User, workout_log};
+module.exports = { User, WorkoutLog };

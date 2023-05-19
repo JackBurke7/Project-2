@@ -1,0 +1,36 @@
+<section class="container row">
+  <div class="col-3">
+    <h1 class="text-center">Welcome, {{ username }}!</h1>
+
+      <div>
+        <label for="workoutNameInput">Workout Name:</label>
+        <input type="text" id="workoutNameInput" name="workoutName" required>
+      </div>
+      <div>
+        <label for="repsInput">Reps:</label>
+        <input type="number" id="repsInput" name="reps" required>
+      </div>
+      <div>
+        <label for="setsInput">Sets:</label>
+        <input type="number" id="setsInput" name="sets" required>
+      </div>
+      <div>
+        <button type="submit">Submit</button>
+      </div>
+    
+
+  
+  <section class="container row">
+    <ul>
+      {{#each workoutForm as |workoutData|}}
+        <li class="col-3">
+          <a href="/dashboard/{{workoutData.id}}">
+            {{workoutData.Workout}}
+          </a>
+        </li>
+      {{/each}}
+    </ul>
+  </section>
+</section>
+
+<script src="/public/js/index.js"></script>
