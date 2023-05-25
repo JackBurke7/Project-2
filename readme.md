@@ -1,0 +1,1 @@
+The goal for this Project was to have a interactive work out plan. For Users to be able to track and set up work out plans. For example sets, bench presses and different positions. By tracking there progress and having a metrics and have a BetterWorks system in place, where they can put in thee goal each week or month.
